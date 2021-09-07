@@ -2,7 +2,7 @@
 Magento 2 Modules
 
 # List of custom Module
-## CategoryProductList add product Thumbnail
+## CategoryProductGirdThumbnail
 To add product Thumbnail into category product list selection grid
 
 ## MassOrderStatus
