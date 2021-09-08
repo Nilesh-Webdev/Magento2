@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+  <system>
+      <tab id="RvsFreeShippingBar" translate="label" sortOrder="100">
+          <label>Rvs Free Shipping Bar</label>
+      </tab>
+        <section id="rvs_freeshippingbar" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Configuration</label>
+            <tab>RvsFreeShippingBar</tab>
+            <resource>Rvs_FreeShippingBar::rvs_freeshippingbar</resource>
+              <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Rvs Free Configurations</label>
+                <field id="enable_free_shipping" translate="label comment" type="select" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                  <label>Enable Free Shipping</label>
+                  <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="shipping_limit" translate="label" type="text" sortOrder="50" showInDefault="0" showInWebsite="1" showInStore="1" canRestore="1">
+                  <label>Free Shipping Limit</label>
+                  <comment>please enter the limit for free Shipping</comment>
+                </field>
+                <field id="shipping_default_message" translate="label" type="text" sortOrder="50" showInDefault="0" showInWebsite="1" showInStore="1" canRestore="1">
+                  <label>Shipping Default Message</label>
+                  <comment>please enter Shipping Promotion default message</comment>
+                </field>
+                <field id="shipping_limit_message" translate="label" type="text" sortOrder="50" showInDefault="0" showInWebsite="1" showInStore="1" canRestore="1">
+                  <label>Shipping Limit When Cart has Product</label>
+                  <comment>please enter Shipping Promotion message when cart above $1</comment>
+                </field>
+                <field id="shipping_free_message" translate="label" type="text" sortOrder="50" showInDefault="0" showInWebsite="1" showInStore="1" canRestore="1">
+                  <label>Free Shipping Message</label>
+                  <comment>Please enter Free Shipping Promotion message</comment>
+                </field>
+                <field id="shipping_default_link" translate="label" type="text" sortOrder="50" showInDefault="0" showInWebsite="1" showInStore="1" canRestore="1">
+                  <label>Free Shipping Details Link</label>
+                  <comment>Please enter link for more details</comment>
+                </field>
+                <field id="currency" translate="label" type="text" sortOrder="50" showInDefault="0" showInWebsite="1" showInStore="1" canRestore="1">
+                  <label>Currency Symbol</label>
+                </field>
+              </group>
+        </section>
+  </system>
+</config>

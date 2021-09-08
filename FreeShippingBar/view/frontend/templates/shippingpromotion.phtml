@@ -1,0 +1,53 @@
+<?php
+$defaultMessage = $block->getShippingConfig("shipping_default_message");
+$link = $block->getShippingConfig("shipping_default_link");
+$moduleStatus = $block->getShippingConfig("enable_free_shipping");
+?>
+<script>
+require([
+   'Magento_Customer/js/customer-data'
+], function (customerData) {
+    var sections = ['rvs_shipping_promotion'];
+    customerData.invalidate(sections);
+    customerData.reload(sections, true);
+});
+ </script>
+<?php
+if($moduleStatus) {
+?>
+<div class="rvs-shipping-promotion" data-bind="scope: 'section'">
+  <!-- ko ifnot: rvsshippingpromotion().message  -->
+  <p data-bind="text: new String('<?= $block->escapeHtml(__($defaultMessage)) ?>')">
+  </p>
+  <!-- /ko -->
+  <p class="rvs-shipping-promotion-details" data-bind="text: rvsshippingpromotion().message">
+
+  </p>
+  <p class="rvs-shipping-promotion-details promotion-detail-link"
+    data-bind='html:"<?= $block->escapeHtml(__("<a href='%1'>  Details</a>", $link )) ?>"'>
+</div>
+<script type="text/x-magento-init">
+    {
+    	"*": {
+        	"Magento_Ui/js/core/app": {
+            	"components": {
+                	"section": {
+                    	"component": "Rvs_FreeShippingBar/js/section"
+                	}
+            	}
+        	}
+    	}
+    }
+</script>
+<style>
+.rvs-shipping-promotion {
+  text-align: center;
+}
+.rvs-shipping-promotion-details{
+    display: inline-block;
+}
+.promotion-detail-link {
+  margin-left: 5px;
+}
+</style>
+<?php }?>

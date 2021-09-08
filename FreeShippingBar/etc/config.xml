@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+      <rvs_freeshippingbar>
+        <general>
+          <enable_free_shipping>1</enable_free_shipping>
+          <shipping_limit>49.99</shipping_limit>
+          <shipping_default_message>Free UK Delivery on orders over £49.99</shipping_default_message>
+          <shipping_limit_message>more to Avail Free Delivery</shipping_limit_message>
+          <shipping_free_message>Hurray you are eligible for Free shipping</shipping_free_message>
+          <shipping_default_link>#</shipping_default_link>
+          <currency>£</currency>
+        </general>
+      </rvs_freeshippingbar>
+    </default>
+</config>
