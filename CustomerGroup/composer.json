@@ -1,0 +1,23 @@
+{
+  "name": "rvs/module-customer-group",
+  "description": "Magento 2 Customer Group Change Extension",  
+  "type": "magento2-module",
+  "version": "1.0.2",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Rvsmedia",
+      "email": "support@rvsmedia.co.uk",
+      "homepage": "https://www.rvsmedia.co.uk",
+      "role": "Technical Support"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Rvs\\CustomerGroup\\": ""
+    }
+  }
+}

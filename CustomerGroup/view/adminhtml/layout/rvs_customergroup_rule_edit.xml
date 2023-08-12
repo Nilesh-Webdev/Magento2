@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="editor"/>
+    <body>
+        <referenceContainer name="content">
+            <block class="Rvs\CustomerGroup\Block\Adminhtml\Rule\Edit" name="rvs_customergroup_rule_edit"/>
+        </referenceContainer>
+        <referenceContainer name="left">
+            <block class="Rvs\CustomerGroup\Block\Adminhtml\Rule\Edit\Tabs" name="rvs_customergroup_rule_tabs">
+                <block class="Rvs\CustomerGroup\Block\Adminhtml\Rule\Edit\Tab\Rule" name="rvs_customergroup_rule_edit_tab_rule"/>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">rule</argument>
+                    <argument name="block" xsi:type="string">rvs_customergroup_rule_edit_tab_rule</argument>
+                </action>                
+            </block>
+        </referenceContainer>
+    </body>
+</page>

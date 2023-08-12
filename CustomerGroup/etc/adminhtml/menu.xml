@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Rvs_CustomerGroup::rule" title="Customer Group Rules" module="Rvs_CustomerGroup" sortOrder="100" parent="Magento_Customer::customer" action="rvs_customergroup/rule/index" resource="Rvs_CustomerGroup::rule"/>
+    </menu>
+</config>
